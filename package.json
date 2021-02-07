@@ -1,0 +1,24 @@
+{
+  "name": "todoList",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happy-coding-0036/todoList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happy-coding-0036/todoList/issues"
+  },
+  "homepage": "https://github.com/happy-coding-0036/todoList#readme",
+  "devDependencies": {
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
