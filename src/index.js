@@ -1,5 +1,13 @@
-import { buildButton, buildList  } from './createElement.js'
+import { buildList  } from './createElement.js'
 
 
 
-buildButton()
+
+
+ const button = document.getElementById("buttonId")
+button.addEventListener("click", buildList)
+
+
+
+
+

@@ -10,35 +10,45 @@ const buildElement = function (element, style, content2, idName) {
 
     return newElement
 }
+
+const button = buildElement("button", "buttonStyle", "submit", "buttonId")
+
 const content = document.getElementById("content")
 
-const buildButton = function() {
+const inputBox = document.createElement("input")
 
 
-  const button = buildElement("button", "buttonStyle", "submit", "buttonId")
-  const inputBox = buildElement("input", "inputStyle", null, "inputId")
-  content.appendChild(button)
-  content.appendChild(inputBox)
 
-}
+inputBox.setAttribute("id", "inputId");
 
-const buildList = function() {
+inputBox.classList.add("inputStyle")
+
+content.appendChild(button)
+content.appendChild(inputBox)
+
+
+
+const buildList = function(event) {
    
-    const listItem = buildElement("li", "navStyle", "submit","listId")
-   
-
-    const container = buildElement("ul", "navConStyle", null, "navId")
-
-    const attachedlist = content.appendChild(container)
+    const newElement = document.createElement("input");
+  
+    newElement.type = "checkbox"
+   var description = document.createTextNode(inputBox.value);
+    newElement.value = "pair";   
+    newElement.classList.add("listStyle")
     
-    attachedlist.appendChild(listItem)
+    const container = buildElement("div", "navConStyle", null, "navId")
+    const attachedlist = content.appendChild(container)
+    attachedlist.appendChild(newElement)
+   attachedlist.appendChild(description)
+  inputBox.value = ""
 
 }
 
 
 
 
-export { buildButton, buildList }
+export { buildList }
 
 
 
